@@ -1,0 +1,5 @@
+<mp-cells>
+  <mp-checkbox-group style="color:gray;text-decoration:line-through;" prop="checkbox" multi="{{true}}" bindchange="checkboxChange">
+    <mp-checkbox  wx:for="{{todoList}}" wx:key="tid" label="{{item.title}}" value="{{item.tid}}" checked></mp-checkbox>
+  </mp-checkbox-group>
+</mp-cells>

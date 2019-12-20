@@ -1,0 +1,31 @@
+<mp-form-page title="注册" subtitle="欢迎来到火腿To-Do">
+  <mp-form>
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+      <view class="page__bd">
+        <mp-cells footer="Tips：用户名必须以字母开头，长度3-15位；密码为6-10位的字母；昵称只要不为空即可~">
+          <mp-cell title="用户名" >
+            <input bindblur="inputUsername" class="weui-input" placeholder="请输入用户名" />
+          </mp-cell>
+          <mp-cell title="密码">
+            <input bindblur="inputPassword" password class="weui-input" placeholder="请输入密码" />
+          </mp-cell>
+          <mp-cell title="昵称">
+            <input bindblur="inputNickname"  class="weui-input" placeholder="请输入昵称" />
+          </mp-cell>
+        </mp-cells>
+        <view class="weui-btn-area">
+          <button class="weui-btn" type="primary" bindtap="register">注册</button>
+        </view>
+      </view>
+    </view>
+  </mp-form>
+</mp-form-page>
+<view class="weui-form__extra-area">
+      <view class="weui-footer">
+        <text class="weui-footer__text">Copyright © 2019-2020</text>
+      </view>
+      <view class="weui-footer">
+        <text class="weui-footer__text">baconham.com</text>
+      </view>
+    </view>

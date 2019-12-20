@@ -1,0 +1,21 @@
+<mp-form-page title="登录" subtitle="欢迎使用火腿To-Do">
+  <mp-form id="form" models="{{formData}}">
+    <mp-toptips msg="{{error}}" type="error" show="{{error}}"></mp-toptips>
+    <view class="page" xmlns:wx="http://www.w3.org/1999/xhtml">
+      <view class="page__bd">
+        <mp-cells>
+          <mp-cell title="用户名">
+            <input bindblur="inputUsername" class="weui-input" placeholder="请输入用户名" />
+          </mp-cell>
+          <mp-cell title="密码">
+            <input bindblur="inputPassword" password class="weui-input" placeholder="请输入密码" />
+          </mp-cell>
+        </mp-cells>
+        <view class="weui-btn-area">
+          <button class="weui-btn" type="primary" bindtap="submitForm">登录</button>
+          <button class="weui-btn" bindtap="goRegister"  type="default">没有账号，去注册</button>
+        </view>
+      </view>
+    </view>
+  </mp-form>
+</mp-form-page>

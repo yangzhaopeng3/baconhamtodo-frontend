@@ -1,0 +1,39 @@
+<!--pages/list/list.wxml-->
+<!-- <view class="input_todo">
+<image class="img_add" src="../../imgs/icon_add.png" mode="widthFix"></image>
+<input class="input_add" value="{{input_value}}" placeholder="请输入待办事项..."
+bindconfirm="submitToDo"></input>
+<image class="img_enter" src="../../imgs/icon_add.png" mode="widthFix"></image>
+</view> -->
+<form bindsubmit="submitForm">
+  <mp-cell>
+    <input name="title" value="{{input_value}}" class="weui-input" bindconfirm="submitToDo" placeholder="请输入待办事项..." />
+    <view slot="footer" class="weui-vcode-btn">
+      <button style="display: flex;justify-content: center;width:50rpx;align-items: center;" formType="submit" class="weui-vcode-btn">
+        <mp-icon icon="add" color="black" size="{{30}}"></mp-icon>
+      </button>
+    </view>
+  </mp-cell>
+</form>
+
+<mp-cells>
+  <mp-checkbox-group prop="checkbox" multi="{{true}}" bindchange="checkboxChange">
+    <mp-slideview data-tid="{{item.tid}}" buttons="{{slideButtons}}" bindbuttontap="slideButtonTap" wx:for="{{todoList}}" wx:key="tid">
+      <mp-checkbox label="{{item.title}}" value="{{item.tid}}" checked="{{item.checked}}"></mp-checkbox>
+    </mp-slideview>
+  </mp-checkbox-group>
+</mp-cells>
+
+
+
+<mp-dialog  show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+        <view>确认删除？</view>
+    </mp-dialog>
+<!-- <checkbox-group  class="group" bindchange="checkboxChange">
+    <view class="label-1" wx:for-items="{{todoList}}">
+        <label>
+            <checkbox value="{{item.tid}}"></checkbox>
+            <text class="label-1__text">{{item.title}}</text>
+        </label>
+    </view>
+</checkbox-group> -->

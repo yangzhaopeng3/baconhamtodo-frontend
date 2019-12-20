@@ -1,0 +1,47 @@
+{
+  "pages": [
+    "pages/list/list",
+    "pages/edit/edit",
+    "pages/login/login",
+    "pages/register/register",
+    "pages/complete/complete",
+    "pages/calendar/calendar",
+    "pages/me/me"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Baconham To Do",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/list/list",
+        "text": "首页",
+        "iconPath": "imgs/icon_compile.png",
+        "selectedIconPath": "imgs/icon_compile_select.png"
+      },
+      {
+        "pagePath": "pages/complete/complete",
+        "text": "已完成",
+        "iconPath": "imgs/icon_task_done.png",
+        "selectedIconPath": "imgs/icon_task_done_select.png"
+      },
+      {
+        "pagePath": "pages/calendar/calendar",
+        "text": "日历",
+        "iconPath": "imgs/icon_calendar.png",
+        "selectedIconPath": "imgs/icon_calendar_select.png"
+      },
+      {
+        "pagePath": "pages/me/me",
+        "text": "我的",
+        "iconPath": "imgs/icon_signal.png",
+        "selectedIconPath": "imgs/icon_signal_select.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

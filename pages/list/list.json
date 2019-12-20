@@ -1,0 +1,13 @@
+{
+  "usingComponents": {
+    "mp-checkbox-group": "../../components/checkbox-group/checkbox-group",
+    "mp-checkbox": "../../components/checkbox/checkbox",
+    "mp-toptips": "../components/toptips/toptips",
+    "mp-cells": "../components/cells/cells",
+    "mp-cell": "../components/cell/cell",
+    "mp-form": "../components/form/form",
+    "mp-icon": "../../components/icon/icon",
+    "mp-slideview": "../components/slideview/slideview",
+    "mp-dialog": "../components/dialog/dialog"
+  }
+}
