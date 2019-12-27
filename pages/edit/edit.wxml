@@ -2,7 +2,7 @@
 
   <form bindsubmit="submitForm">
 
-    <mp-form id="form" rules="{{rules}}">
+    <mp-form id="form">
       <mp-cells>
         <mp-cell>
           <input class="weui-input" name="title" value="{{input_title}}" placeholder="todo" />
@@ -12,6 +12,14 @@
             <view class="weui-input">{{date}}</view>
           </picker>
         </mp-cell>
+
+  <mp-cell title="分类">
+          <picker name="cid" value="{{index}}" data-cid="{{categoryList[index].cid}}" range-key="cname"  range="{{categoryList}}" mode="selector" bindchange="bindCategoryChange">
+            <view class="weui-input">{{categoryList[index].cname}}</view>
+          </picker>
+        </mp-cell>
+
+       
 
         <!-- <mp-cell title="分类">
           <picker data-field="date" mode="date" value="{{input_date1}}" start="2019-11-11" end="2020-11-11" bindchange="bindDateChange">
@@ -27,7 +35,6 @@
         <view class="weui-cell">
           <view class="weui-cell__bd">
             <textarea name="detail" class="weui-textarea" value="{{input_detail}}" placeholder="请输入文本" style="height: 3.3em" />
-            <view class="weui-textarea-counter">0/200</view>
           </view>
         </view>
       </view>
@@ -43,6 +50,6 @@
 
 </view>
 
-<mp-dialog  show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
-        <view>确认删除？</view>
-    </mp-dialog>
+<mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+  <view>确认删除？</view>
+</mp-dialog>

@@ -1,2 +1,14 @@
-<!--pages/me/me.wxml-->
-<text>pages/me/me.wxml</text>
+<mp-form-page title="{{nickname}}" subtitle="个人中心">
+
+  <form bindsubmit="submitForm">
+    <mp-cell>
+      <input name="title" value="{{input_value}}" class="weui-input" bindconfirm="submitCate" placeholder="新增分类" />
+      <view slot="footer" class="weui-vcode-btn">
+        <button style="display: flex;justify-content: center;width:50rpx;align-items: center;" formType="submit" class="weui-vcode-btn">
+          <mp-icon icon="add" color="black" size="{{30}}"></mp-icon>
+        </button>
+      </view>
+    </mp-cell>
+  </form>
+  <mp-cell bindtap="updateCategory" data-cid="{{item.cid}}" hover="true" wx:for="{{categoryList}}" wx:key="{{item.cid}}" value="{{item.cname}}"></mp-cell>
+</mp-form-page>

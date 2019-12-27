@@ -96,6 +96,10 @@ Page({
         }
         wx.request({
           url: 'http://127.0.0.1:8080/user/login',
+          method: "POST",
+          header: {
+            'content-type': 'application/x-www-form-urlencoded'
+          },
           data: {
             username: username,
             password: password
@@ -104,7 +108,11 @@ Page({
             let code = res.data.code;
             let msg = res.data.msg;
             if (code === 0) {
+              //设置全局用户标识uid
               getApp().globalData.uid = res.data.data.uid;
+              getApp().globalData.nickname = res.data.data.nickname;
+              getApp().globalData.sessionId = 'JSESSIONID=' + res.data.data.sessionId;
+              console.log(getApp().globalData.uid);
               wx.showToast({
                 title: msg,
                 duration: 2000,

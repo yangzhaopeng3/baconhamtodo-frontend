@@ -14,6 +14,13 @@ bindconfirm="submitToDo"></input>
       </button>
     </view>
   </mp-cell>
+
+<mp-cell title="分类">
+  <picker value="{{index}}" data-cid="{{categoryList[index].cid}}" range-key="cname" range="{{categoryList}}" mode="selector" bindchange="bindCategoryChange">
+    <view class="weui-input">{{categoryList[index].cname}}</view>
+  </picker>
+</mp-cell>
+
 </form>
 
 <mp-cells>
@@ -26,9 +33,9 @@ bindconfirm="submitToDo"></input>
 
 
 
-<mp-dialog  show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
-        <view>确认删除？</view>
-    </mp-dialog>
+<mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+  <view>确认删除？</view>
+</mp-dialog>
 <!-- <checkbox-group  class="group" bindchange="checkboxChange">
     <view class="label-1" wx:for-items="{{todoList}}">
         <label>

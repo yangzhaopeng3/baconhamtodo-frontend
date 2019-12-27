@@ -1,12 +1,13 @@
 {
   "pages": [
+    "pages/login/login",
     "pages/list/list",
     "pages/edit/edit",
-    "pages/login/login",
     "pages/register/register",
     "pages/complete/complete",
     "pages/calendar/calendar",
-    "pages/me/me"
+    "pages/me/me",
+    "pages/update_cate/update_cate"
   ],
   "window": {
     "backgroundTextStyle": "light",
@@ -27,12 +28,6 @@
         "text": "已完成",
         "iconPath": "imgs/icon_task_done.png",
         "selectedIconPath": "imgs/icon_task_done_select.png"
-      },
-      {
-        "pagePath": "pages/calendar/calendar",
-        "text": "日历",
-        "iconPath": "imgs/icon_calendar.png",
-        "selectedIconPath": "imgs/icon_calendar_select.png"
       },
       {
         "pagePath": "pages/me/me",

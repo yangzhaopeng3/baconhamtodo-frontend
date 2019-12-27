@@ -34,7 +34,8 @@ App({
     })
   },
   globalData: {
-    userInfo: null,
-    uid: 2
+    nickname: "测试数据",
+    sessionId: String,
+    uid: Number
   }
 })

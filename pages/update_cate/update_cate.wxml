@@ -1,0 +1,18 @@
+<view class="page__bd" style="margin-top:50rpx;">
+
+  <form bindsubmit="submitForm">
+    <mp-form id="form">
+        <mp-cell>
+          <input class="weui-input" name="cname" value="{{input_title}}" placeholder="category" />
+        </mp-cell>
+      <view class="weui-btn-area">
+        <button class="weui-btn" type="primary" form-type="submit">修改</button>
+        <button class="weui-btn" type="warn" bindtap="deleteCategory">删除</button>
+      </view>
+    </mp-form>
+  </form>
+</view>
+
+<mp-dialog show="{{dialogShow}}" bindbuttontap="tapDialogButton" buttons="{{buttons}}">
+  <view>确认删除？</view>
+</mp-dialog>

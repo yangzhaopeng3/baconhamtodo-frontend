@@ -89,7 +89,8 @@ Page({
             is_done: 0
           },
           header: {
-            'content-type': 'application/x-www-form-urlencoded'
+            'content-type': 'application/x-www-form-urlencoded',
+            'Cookie': getApp().globalData.sessionId
           },
           success(res) {
             console.log(res.data);
@@ -127,6 +128,10 @@ Page({
         wx.request({
           url: 'http://127.0.0.1:8080/todo',
           method: "GET",
+          header: {
+            'content-type': 'application/x-www-form-urlencoded',
+            'Cookie': getApp().globalData.sessionId
+          },
           data: {
             uid: getApp().globalData.uid,
             is_done: 1
